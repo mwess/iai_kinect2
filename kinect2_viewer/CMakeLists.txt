@@ -78,6 +78,8 @@ target_link_libraries(kinect2_viewer
   ${OpenCV_LIBRARIES}
   ${PCL_LIBRARIES}
   ${kinect2_bridge_LIBRARIES}
+  ${PCL_COMMON_LIBRARIES}
+  ${PCL_IO_LIBRARIES}
 )
 
 #############
