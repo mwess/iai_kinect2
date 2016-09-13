@@ -1,5 +1,4 @@
-#cmake_minimum_required(VERSION 2.8.3)
-cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8.3)
 project(kinect2_viewer CXX)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBT_USE_DOUBLE_PRECISION -Wall")
@@ -69,6 +68,8 @@ include_directories(include
   ${PCL_INCLUDE_DIRS}
   ${kinect2_bridge_INCLUDE_DIRS}
 )
+
+link_directories(${PCL_LIBRARY_DIRS})
 
 add_executable(kinect2_viewer src/viewer.cpp)
 target_link_libraries(kinect2_viewer
