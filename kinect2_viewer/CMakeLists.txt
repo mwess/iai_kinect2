@@ -70,6 +70,7 @@ include_directories(include
 )
 
 link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
 
 add_executable(kinect2_viewer src/viewer.cpp)
 target_link_libraries(kinect2_viewer
